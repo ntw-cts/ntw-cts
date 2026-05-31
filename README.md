@@ -1,11 +1,11 @@
 <div align="center">
-
-<!-- Banner GIF -->
-<img src="./gif.gif" width="100%" />
-
+  
 <!-- Greeting -->
 <p><strong style="font-size:1.5em;">Welcome to my profile <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"/></strong></p>
 <p><strong>✦ ntw-cts ✦</strong></p>
+
+<!-- Banner GIF -->
+<img src="./gif.gif" width="100%" />
 
 <!-- Typing quote -->
 <img src="https://readme-typing-svg.demolab.com?font=Noto+Serif&size=13&pause=3000&color=B4BEFE&center=true&vCenter=true&width=600&height=30&lines=I+don't+watch+anime.+I+conduct+research+on+animated+storytelling.;My+code+works.+I+don't+know+why.+Please+don't+touch+it.;It's+not+procrastination+if+you're+watching+anime+with+subtitles.;404%3A+social+life+not+found.+Currently+watching+12+anime." alt="typing quote" />

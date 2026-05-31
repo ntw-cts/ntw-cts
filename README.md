@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Greeting -->
-<p><img src="https://readme-typing-svg.demolab.com?font=Noto+Serif&size=24&pause=9999999&color=FFFFFF&center=true&vCenter=true&width=500&height=50&lines=Welcome+to+my+profile+👋" alt="Welcome to my profile" /></p>
+<h1>Welcome to my profile <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"/></h1>
 <p><img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=18&pause=9999999&color=CBA6F7&center=true&vCenter=true&width=300&height=40&lines=%E2%9C%A6+ntw-cts+%E2%9C%A6" alt="ntw-cts" /></p>
 
 <!-- Banner GIF -->

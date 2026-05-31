@@ -1,8 +1,8 @@
 <div align="center">
-  
+
 <!-- Greeting -->
-<p><strong style="font-size:1.5em;">Welcome to my profile <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"/></strong></p>
-<p><strong>✦ ntw-cts ✦</strong></p>
+<p><img src="https://readme-typing-svg.demolab.com?font=Noto+Serif&size=24&pause=9999999&color=FFFFFF&center=true&vCenter=true&width=500&height=50&lines=Welcome+to+my+profile+👋" alt="Welcome to my profile" /></p>
+<p><img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=18&pause=9999999&color=CBA6F7&center=true&vCenter=true&width=300&height=40&lines=%E2%9C%A6+ntw-cts+%E2%9C%A6" alt="ntw-cts" /></p>
 
 <!-- Banner GIF -->
 <img src="./gif.gif" width="100%" />
@@ -12,14 +12,6 @@
 
 <br/><br/>
 
-<!-- Anime section divider -->
-<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=12&pause=9999999&color=CBA6F7&center=true&vCenter=true&width=300&height=28&lines=%E2%9C%A6+Favorite+Anime+%E2%9C%A6" alt="Favorite Anime" />
-
-<!-- Anime cards (untouched!) -->
-<img src="https://anime-card-one.vercel.app/card" width="100%" />
-
-<br/>
-
 <!-- Featured project divider -->
 <img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=12&pause=9999999&color=CBA6F7&center=true&vCenter=true&width=300&height=28&lines=%E2%9C%A6+Featured+Project+%E2%9C%A6" alt="Featured Project" />
 
@@ -27,7 +19,7 @@
 <table>
   <tr>
     <td width="60" align="center">
-      <img src="./YUZU.PNG" width="44" height="44" style="border-radius:10px"/>
+      <img src="./IMG_4819.PNG" width="44" height="44" style="border-radius:10px"/>
     </td>
     <td align="left">
       <a href="https://github.com/ntw-cts/yuzu"><strong>YUZU</strong></a>
@@ -49,5 +41,13 @@
 
 <!-- Skill icons -->
 <img src="https://skillicons.dev/icons?i=html,css,js,py,ts&theme=dark" alt="My Skills" />
+
+<br/><br/>
+
+<!-- Anime section divider -->
+<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=12&pause=9999999&color=CBA6F7&center=true&vCenter=true&width=300&height=28&lines=%E2%9C%A6+Favorite+Anime+%E2%9C%A6" alt="Favorite Anime" />
+
+<!-- Anime cards (untouched!) -->
+<img src="https://anime-card-one.vercel.app/card" width="100%" />
 
 </div>

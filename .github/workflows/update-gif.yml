@@ -37,8 +37,8 @@ jobs:
           )
           TAG="${TAGS[$RANDOM % ${#TAGS[@]}]}"
           echo "Selected tag: $TAG"
-          URL=$(curl -s "https://api.giphy.com/v1/gifs/random?api_key=${{ secrets.GIPHY_API_KEY }}&tag=${TAG}&rating=pg" \
-            | python3 -c "import sys,json; print(json.load(sys.stdin)['data']['images']['original']['url'])")
+          URL=$(curl -s "https://api.giphy.com/v1/gifs/search?api_key=${{ secrets.GIPHY_API_KEY }}&q=${TAG}&rating=pg&limit=3" \
+            | python3 -c "import sys,json,random; data=json.load(sys.stdin)['data']; print(random.choice(data)['images']['original']['url'])")
           curl -sL "$URL" -o gif.gif
 
       - name: Commit and push

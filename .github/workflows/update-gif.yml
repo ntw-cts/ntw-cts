@@ -3,12 +3,17 @@ on:
   schedule:
     - cron: '0 * * * *'
   workflow_dispatch:
-
 jobs:
   update-gif:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Pull latest
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git pull --rebase origin main
 
       - name: Fetch random yuri gif from Giphy
         run: |
@@ -18,9 +23,6 @@ jobs:
 
       - name: Commit and push
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git pull --rebase origin main   # ← pull latest before committing
           git add gif.gif
           git diff --cached --quiet || git commit -m "chore: update hourly gif"
           git push

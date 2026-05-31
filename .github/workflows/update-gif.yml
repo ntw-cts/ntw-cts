@@ -17,7 +17,25 @@ jobs:
 
       - name: Fetch random yuri gif from Giphy
         run: |
-          URL=$(curl -s "https://api.giphy.com/v1/gifs/random?api_key=${{ secrets.GIPHY_API_KEY }}&tag=yuri+anime&rating=pg" \
+          TAGS=(
+            "yuri+anime"
+            "shoujo+ai"
+            "anime+couple+girls"
+            "anime+romance"
+            "anime+cute+girls"
+            "anime+aesthetic"
+            "anime+kawaii"
+            "magical+girl+anime"
+            "violet+evergarden"
+            "k-on+anime"
+            "lucky+star+anime"
+            "a+place+further+than+the+universe"
+            "anime+fight+girls"
+            "anime+action"
+          )
+          TAG="${TAGS[$RANDOM % ${#TAGS[@]}]}"
+          echo "Selected tag: $TAG"
+          URL=$(curl -s "https://api.giphy.com/v1/gifs/random?api_key=${{ secrets.GIPHY_API_KEY }}&tag=${TAG}&rating=pg" \
             | python3 -c "import sys,json; print(json.load(sys.stdin)['data']['images']['original']['url'])")
           curl -sL "$URL" -o gif.gif
 

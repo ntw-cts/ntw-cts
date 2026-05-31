@@ -1,18 +1,21 @@
 name: Update Random GIF
 on:
   schedule:
-    - cron: '0 * * * *'  # every hour
-  workflow_dispatch:       # lets you trigger it manually too
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
 jobs:
   update-gif:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Fetch random yuri gif from Giphy
         run: |
-          URL=$(curl -s "https://api.giphy.com/v1/gifs/search?api_key=${{ secrets.GIPHY_API_KEY }}&q=yuri+anime&rating=pg&limit=50" \
-            | python3 -c "import sys,json,random; data=json.load(sys.stdin)['data']; print(random.choice(data)['images']['original']['url'])")
+          URL=$(curl -s "https://api.giphy.com/v1/gifs/random?api_key=${{ secrets.GIPHY_API_KEY }}&tag=yuri+anime&rating=pg" \
+            | python3 -c "import sys,json; print(json.load(sys.stdin)['data']['images']['original']['url'])")
           curl -sL "$URL" -o gif.gif
+
       - name: Commit and push
         run: |
           git config user.name "github-actions"

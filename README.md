@@ -18,26 +18,24 @@
 <!-- Featured Projects -->
 <table width="100%">
   <tr>
-    <td width="80" align="center">
+    <td width="50%" align="center" valign="top">
+      <br/>
       <img src="./YUZU.PNG" width="60" height="60" style="border-radius:10px"/>
-    </td>
-    <td align="left">
+      <br/><br/>
       <a href="https://github.com/ntw-cts/yuzu"><strong>YUZU</strong></a>
-      &nbsp;—&nbsp; Premium Anime Streaming Web App<br/>
-      <p>A clean, minimal anime streaming platform. Browse by season, track your watchlist, and stream your favorites — all in one place.</p>
+      &nbsp;—&nbsp; Premium Anime Streaming Web App<br/><br/>
+      <p align="left">A clean, minimal anime streaming platform. Browse by season, track your watchlist, and stream your favorites — all in one place.</p>
       <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
       <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
       <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
     </td>
-  </tr>
-  <tr>
-    <td width="80" align="center">
+    <td width="50%" align="center" valign="top">
+      <br/>
       <img src="./Spotify_icon.png" width="60" height="60" style="border-radius:10px"/>
-    </td>
-    <td align="left">
+      <br/><br/>
       <a href="https://github.com/ntw-cts/Spotify-Romaji-Lyrics"><strong>Spotify-Romaji-Lyrics</strong></a>
-      &nbsp;—&nbsp; Browser Extension<br/>
-      <p>Automatically detects Japanese lyrics on Spotify and injects Romaji subtitles directly underneath each line.</p>
+      &nbsp;—&nbsp; Browser Extension<br/><br/>
+      <p align="left">Automatically detects Japanese lyrics on Spotify and injects Romaji subtitles directly underneath each line.</p>
       <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
       <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
     </td>

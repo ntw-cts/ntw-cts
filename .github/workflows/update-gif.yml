@@ -2,7 +2,7 @@ name: Update Random GIF
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # runs every day at midnight UTC
+    - cron: '0 * * * *'  # every hour
   workflow_dispatch:       # lets you trigger it manually too
 
 jobs:

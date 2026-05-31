@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="860" height="332" viewBox="0 0 860 332">
+  <rect width="860" height="332" fill="#0d1117"/>
+  
+    <g transform="translate(0, 0)">
+      <rect width="860" height="160" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <rect width="3" height="160" rx="1" fill="#ff6eb4"/>
+
+      <!-- poster placeholder (image via foreignObject won't work in SVG, use rect as bg) -->
+      <rect x="12" y="12" width="92" height="136" rx="8" fill="#0d1117" stroke="#30363d"/>
+      <image href="https://cdn.myanimelist.net/images/anime/1026/155965l.jpg" x="12" y="12" width="92" height="136"
+        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip0)"/>
+      <clipPath id="clip0">
+        <rect x="12" y="12" width="92" height="136" rx="8"/>
+      </clipPath>
+
+      <!-- season badge -->
+      <text x="844" y="26" text-anchor="end"
+        font-family="monospace" font-size="10" fill="#ff6eb4" opacity="0.8">Spring 2026</text>
+
+      <!-- title -->
+      <text x="116" y="36"
+        font-family="monospace" font-size="15" font-weight="bold" fill="#e6edf3">Botan Kamiina Fully Blossoms When Drunk</text>
+
+      <!-- score + studio -->
+      <text x="116" y="54"
+        font-family="monospace" font-size="11" fill="#ffd60a">⭐ 7.83</text>
+      <text x="172" y="54"
+        font-family="monospace" font-size="11" fill="#8b949e">· Soigne · 12 eps</text>
+
+      <!-- synopsis -->
+      <text x="116" y="72"
+          font-family="monospace" font-size="11" fill="#8b949e">For Ibuki Tonami, drinking alcohol is her favorite way to unwind from her college studies</text><text x="116" y="88"
+          font-family="monospace" font-size="11" fill="#8b949e">and duties as her dormitory's resident assistant. However, due to past bad experiences</text><text x="116" y="104"
+          font-family="monospace" font-size="11" fill="#8b949e">with others, Ibuki feels insecure about the hiccups she gets when drinking and therefore</text>
+
+      <!-- genre pills -->
+      
+        <rect x="116" y="108" width="86" height="18" rx="9"
+          fill="none" stroke="#ff6eb4" stroke-width="1" opacity="0.7"/>
+        <text x="159" y="121" text-anchor="middle"
+          font-family="monospace" font-size="10" fill="#ff6eb4" opacity="0.9">Girls Love</text>
+        
+        <rect x="210" y="108" width="65" height="18" rx="9"
+          fill="none" stroke="#ff6eb4" stroke-width="1" opacity="0.7"/>
+        <text x="242" y="121" text-anchor="middle"
+          font-family="monospace" font-size="10" fill="#ff6eb4" opacity="0.9">Gourmet</text>
+        
+        <rect x="283" y="108" width="107" height="18" rx="9"
+          fill="none" stroke="#ff6eb4" stroke-width="1" opacity="0.7"/>
+        <text x="336" y="121" text-anchor="middle"
+          font-family="monospace" font-size="10" fill="#ff6eb4" opacity="0.9">Slice of Life</text>
+        
+    </g>
+    
+    <g transform="translate(0, 172)">
+      <rect width="860" height="160" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+      <rect width="3" height="160" rx="1" fill="#58a6ff"/>
+
+      <!-- poster placeholder (image via foreignObject won't work in SVG, use rect as bg) -->
+      <rect x="12" y="12" width="92" height="136" rx="8" fill="#0d1117" stroke="#30363d"/>
+      <image href="https://cdn.myanimelist.net/images/anime/1834/151169l.jpg" x="12" y="12" width="92" height="136"
+        preserveAspectRatio="xMidYMid slice" clip-path="url(#clip172)"/>
+      <clipPath id="clip172">
+        <rect x="12" y="12" width="92" height="136" rx="8"/>
+      </clipPath>
+
+      <!-- season badge -->
+      <text x="844" y="26" text-anchor="end"
+        font-family="monospace" font-size="10" fill="#58a6ff" opacity="0.8">Winter 2026</text>
+
+      <!-- title -->
+      <text x="116" y="36"
+        font-family="monospace" font-size="15" font-weight="bold" fill="#e6edf3">Shiboyugi: Playing Death Games to Put Food…</text>
+
+      <!-- score + studio -->
+      <text x="116" y="54"
+        font-family="monospace" font-size="11" fill="#ffd60a">⭐ 7.13</text>
+      <text x="172" y="54"
+        font-family="monospace" font-size="11" fill="#8b949e">· Studio Deen · 11 eps</text>
+
+      <!-- synopsis -->
+      <text x="116" y="72"
+          font-family="monospace" font-size="11" fill="#8b949e">Yuuki wakes up to find herself in an unfamiliar manor, wearing a maid uniform and lying on</text><text x="116" y="88"
+          font-family="monospace" font-size="11" fill="#8b949e">a luxurious bed. Soon, she discovers five more girls, all dressed the same as her. This is</text><text x="116" y="104"
+          font-family="monospace" font-size="11" fill="#8b949e">the Ghost House, and the only way they can survive is to make it through the traps that</text>
+
+      <!-- genre pills -->
+      
+        <rect x="116" y="108" width="58" height="18" rx="9"
+          fill="none" stroke="#58a6ff" stroke-width="1" opacity="0.7"/>
+        <text x="145" y="121" text-anchor="middle"
+          font-family="monospace" font-size="10" fill="#58a6ff" opacity="0.9">Action</text>
+        
+        <rect x="182" y="108" width="72" height="18" rx="9"
+          fill="none" stroke="#58a6ff" stroke-width="1" opacity="0.7"/>
+        <text x="218" y="121" text-anchor="middle"
+          font-family="monospace" font-size="10" fill="#58a6ff" opacity="0.9">Suspense</text>
+        
+    </g>
+    
+</svg>

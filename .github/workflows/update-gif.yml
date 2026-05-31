@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Pull latest
         run: |
@@ -23,7 +25,6 @@ jobs:
             "anime+aesthetic"
             "anime+kawaii"
             "magical+girl+anime"
-            "k-on+anime"
             "bocchi+the+rock+anime"
             "bloom+into+you+anime"
             "yuru+yuri+anime"
@@ -43,5 +44,5 @@ jobs:
       - name: Commit and push
         run: |
           git add gif.gif
-          git diff --cached --quiet || git commit -m "chore: update hourly gif"
+          git commit --allow-empty -m "chore: update hourly gif [$(date +%s)]"
           git push

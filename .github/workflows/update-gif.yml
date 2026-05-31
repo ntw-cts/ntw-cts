@@ -21,19 +21,13 @@ jobs:
         run: |
           TAGS=(
             "yuri+anime"
-            "anime+cute+girls"
-            "anime+aesthetic"
-            "anime+kawaii"
-            "magical+girl+anime"
             "bocchi+the+rock+anime"
             "bloom+into+you+anime"
             "yuru+yuri+anime"
-            "sakura+trick+anime"
-            "adachi+and+shimamura+anime"
-            "lycoris+recoil+anime"
-            "madoka+magica+anime"
-            "lucky+star+anime"
+            "lycoris+recoil"
+            "madoka+magica"
             "girls+band+cry+anime"
+            "lucky+star+anime"
           )
           TAG="${TAGS[$RANDOM % ${#TAGS[@]}]}"
           echo "Selected tag: $TAG"

@@ -57,6 +57,11 @@
 
 <br/><br/>
 
+<!-- GitHub Streak -->
+<img src="https://streak-stats.demolab.com?user=ntw-cts&theme=catppuccin-mocha&hide_border=true" alt="GitHub Streak" />
+
+<br/><br/>
+
 <!-- Anime section divider -->
 <img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=18&pause=9999999&color=CBA6F7&center=true&vCenter=true&width=400&height=40&lines=%E2%9C%A6+Favorite+Anime+%E2%9C%A6" alt="Favorite Anime" />
 

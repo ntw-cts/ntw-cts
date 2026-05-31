@@ -19,7 +19,7 @@
 <table>
   <tr>
     <td width="60" align="center">
-      <img src="./IMG_4819.PNG" width="44" height="44" style="border-radius:10px"/>
+      <img src="./YUZU.PNG" width="44" height="44" style="border-radius:10px"/>
     </td>
     <td align="left">
       <a href="https://github.com/ntw-cts/yuzu"><strong>YUZU</strong></a>

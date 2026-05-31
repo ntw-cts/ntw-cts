@@ -38,7 +38,7 @@
       <br/><br/>
       <a href="https://github.com/ntw-cts/Spotify-Romaji-Lyrics"><strong>Spotify-Romaji-Lyrics</strong></a>
       &nbsp;—&nbsp; Browser Extension<br/><br/>
-      <p align="left">Automatically detects Japanese lyrics on Spotify and injects Romaji subtitles directly underneath each line.</p>
+      <p align="left">A browser extension that detects Japanese lyrics on Spotify Web Player and instantly injects Romaji subtitles underneath each line — powered by kuroshiro for accurate romanization.</p>
       <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
       <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
     </td>

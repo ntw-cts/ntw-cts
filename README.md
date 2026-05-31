@@ -24,10 +24,13 @@
       <br/><br/>
       <a href="https://github.com/ntw-cts/yuzu"><strong>YUZU</strong></a>
       &nbsp;—&nbsp; Premium Anime Streaming Web App<br/><br/>
-      <p align="left">A clean, minimal anime streaming platform. Browse by season, track your watchlist, and stream your favorites — all in one place.</p>
+      <p align="left">A modern, ad-free anime streaming platform with HLS adaptive streaming, sub/dub toggle, auto-next episode, simulcast calendar, and a sleek dark UI — deployed on Vercel.</p>
       <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
       <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
       <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+      <img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
+      <img alt="Express.js" src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"/>
+      <img alt="Vercel" src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
     </td>
     <td width="50%" align="center" valign="top">
       <br/>
@@ -50,7 +53,7 @@
 <br/>
 
 <!-- Skill icons -->
-<img src="https://skillicons.dev/icons?i=html,css,js,py,ts&theme=dark" height="60" alt="My Skills" />
+<img src="https://skillicons.dev/icons?i=html,css,js,nodejs,express,py,ts&theme=dark" height="60" alt="My Skills" />
 
 <br/><br/>
 

@@ -12,6 +12,9 @@
 
 <br/><br/>
 
+<!-- Featured project divider -->
+<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=18&pause=9999999&color=CBA6F7&center=true&vCenter=true&width=400&height=40&lines=%E2%9C%A6+Featured+Projects+%E2%9C%A6" alt="Featured Projects" />
+
 <!-- Featured Projects -->
 <table width="100%">
   <tr>
@@ -27,7 +30,6 @@
       <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
     </td>
   </tr>
-  <tr><td colspan="2"><br/></td></tr>
   <tr>
     <td width="80" align="center">
       <img src="./Spotify_icon.png" width="60" height="60" style="border-radius:10px"/>

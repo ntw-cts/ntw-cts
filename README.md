@@ -13,7 +13,7 @@
 <br/><br/>
 
 <!-- Featured project divider -->
-<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=18&pause=9999999&color=CBA6F7&center=true&vCenter=true&width=400&height=40&lines=%E2%9C%A6+Featured+Project+%E2%9C%A6" alt="Featured Project" />
+<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=18&pause=9999999&color=CBA6F7&center=true&vCenter=true&width=400&height=40&lines=%E2%9C%A6+Featured+Projects+%E2%9C%A6" alt="Featured Projects" />
 
 <!-- Yuzu project card -->
 <table>
@@ -24,7 +24,24 @@
     <td align="left">
       <a href="https://github.com/ntw-cts/yuzu"><strong>YUZU</strong></a>
       &nbsp;—&nbsp; Premium Anime Streaming Web App<br/>
-      <sub>A clean, minimal anime streaming platform. Browse by season, track your watchlist, and stream your favorites — all in one place.</sub><br/><br/>
+      <p>A clean, minimal anime streaming platform. Browse by season, track your watchlist, and stream your favorites — all in one place.</p>
+      <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
+      <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+      <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+    </td>
+  </tr>
+</table>
+
+<!-- Spotify Romaji project card -->
+<table>
+  <tr>
+    <td width="80" align="center">
+      <img src="./Spotify_icon.png" width="60" height="60" style="border-radius:10px"/>
+    </td>
+    <td align="left">
+      <a href="https://github.com/ntw-cts/Spotify-Romaji-Lyrics"><strong>Spotify-Romaji-Lyrics</strong></a>
+      &nbsp;—&nbsp; Browser Extension<br/>
+      <p>Automatically detects Japanese lyrics on Spotify and injects Romaji subtitles directly underneath each line.</p>
       <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
       <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
       <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>

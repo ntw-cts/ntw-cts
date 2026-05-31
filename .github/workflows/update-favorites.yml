@@ -14,7 +14,7 @@ jobs:
       - name: Generate favorite anime cards
         run: |
           python3 << 'PYEOF'
-          import urllib.request, json, textwrap, time
+          import urllib.request, json, textwrap, time, os
 
           def fetch(title):
               q = urllib.request.quote(title)
@@ -22,6 +22,12 @@ jobs:
               req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
               with urllib.request.urlopen(req) as r:
                   return json.loads(r.read())["data"][0]
+
+          def download_image(url, path):
+              req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+              with urllib.request.urlopen(req) as r:
+                  with open(path, "wb") as f:
+                      f.write(r.read())
 
           def wrap(text, width, lines):
               words = text.split()
@@ -51,15 +57,23 @@ jobs:
           cards_svg = ""
           y_offset = 0
 
-          for title, season, accent in favorites:
+          for idx, (title, season, accent) in enumerate(favorites):
               try:
                   d = fetch(title)
-                  time.sleep(1)  # jikan rate limit
+                  time.sleep(1)
               except Exception as e:
                   print(f"Failed to fetch {title}: {e}")
                   continue
 
               img_url = d["images"]["jpg"]["large_image_url"]
+              img_path = f"poster_{idx}.jpg"
+              try:
+                  download_image(img_url, img_path)
+                  print(f"Downloaded poster for {title}")
+              except Exception as e:
+                  print(f"Failed to download image: {e}")
+                  img_path = None
+
               en_title = d.get("title_english") or d.get("title") or title
               score = d.get("score") or "N/A"
               episodes = d.get("episodes") or "?"
@@ -68,9 +82,15 @@ jobs:
               synopsis = d.get("synopsis", "No synopsis available.")
               synopsis_lines = wrap(synopsis, 90, 3)
 
-              # truncate title
               if len(en_title) > 42:
                   en_title = en_title[:42] + "…"
+
+              # encode image as base64
+              img_data = ""
+              if img_path and os.path.exists(img_path):
+                  import base64
+                  with open(img_path, "rb") as f:
+                      img_data = "data:image/jpeg;base64," + base64.b64encode(f.read()).decode()
 
               genre_pills = ""
               gx = IMG_W + 16
@@ -89,37 +109,32 @@ jobs:
                   synopsis_text += f'''<text x="{IMG_W + 16}" y="{72 + si*16}"
                     font-family="monospace" font-size="11" fill="#8b949e">{sl}</text>'''
 
+              img_tag = ""
+              if img_data:
+                  img_tag = f'''
+                  <image href="{img_data}" x="12" y="12" width="{IMG_W - 8}" height="{CARD_H - 24}"
+                    preserveAspectRatio="xMidYMid slice" clip-path="url(#clip{idx})"/>
+                  <clipPath id="clip{idx}">
+                    <rect x="12" y="12" width="{IMG_W - 8}" height="{CARD_H - 24}" rx="8"/>
+                  </clipPath>
+                  '''
+              else:
+                  img_tag = f'<rect x="12" y="12" width="{IMG_W - 8}" height="{CARD_H - 24}" rx="8" fill="#0d1117" stroke="#30363d"/>'
+
               cards_svg += f'''
               <g transform="translate(0, {y_offset})">
                 <rect width="{CARD_W}" height="{CARD_H}" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1"/>
                 <rect width="3" height="{CARD_H}" rx="1" fill="{accent}"/>
-
-                <!-- poster placeholder (image via foreignObject won't work in SVG, use rect as bg) -->
-                <rect x="12" y="12" width="{IMG_W - 8}" height="{CARD_H - 24}" rx="8" fill="#0d1117" stroke="#30363d"/>
-                <image href="{img_url}" x="12" y="12" width="{IMG_W - 8}" height="{CARD_H - 24}"
-                  preserveAspectRatio="xMidYMid slice" clip-path="url(#clip{y_offset})"/>
-                <clipPath id="clip{y_offset}">
-                  <rect x="12" y="12" width="{IMG_W - 8}" height="{CARD_H - 24}" rx="8"/>
-                </clipPath>
-
-                <!-- season badge -->
+                {img_tag}
                 <text x="{CARD_W - 16}" y="26" text-anchor="end"
                   font-family="monospace" font-size="10" fill="{accent}" opacity="0.8">{season}</text>
-
-                <!-- title -->
                 <text x="{IMG_W + 16}" y="36"
                   font-family="monospace" font-size="15" font-weight="bold" fill="#e6edf3">{en_title}</text>
-
-                <!-- score + studio -->
                 <text x="{IMG_W + 16}" y="54"
                   font-family="monospace" font-size="11" fill="#ffd60a">⭐ {score}</text>
                 <text x="{IMG_W + 72}" y="54"
                   font-family="monospace" font-size="11" fill="#8b949e">· {studios} · {episodes} eps</text>
-
-                <!-- synopsis -->
                 {synopsis_text}
-
-                <!-- genre pills -->
                 {genre_pills}
               </g>
               '''

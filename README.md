@@ -16,7 +16,7 @@
 <img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=18&pause=9999999&color=CBA6F7&center=true&vCenter=true&width=400&height=40&lines=%E2%9C%A6+Featured+Projects+%E2%9C%A6" alt="Featured Projects" />
 
 <!-- Yuzu project card -->
-<table>
+<table width="100%">
   <tr>
     <td width="80" align="center">
       <img src="./YUZU.PNG" width="60" height="60" style="border-radius:10px"/>
@@ -33,17 +33,16 @@
 </table>
 
 <!-- Spotify Romaji project card -->
-<table>
+<table width="100%">
   <tr>
     <td width="80" align="center">
-      <img src="./Spotify_icon.png" width="60" height="60" style="border-radius:10px"/>
+      <img src="https://img.shields.io/badge/-🧩-4285F4?style=flat&logoColor=white" width="60" height="60"/>
     </td>
     <td align="left">
       <a href="https://github.com/ntw-cts/Spotify-Romaji-Lyrics"><strong>Spotify-Romaji-Lyrics</strong></a>
       &nbsp;—&nbsp; Browser Extension<br/>
       <p>Automatically detects Japanese lyrics on Spotify and injects Romaji subtitles directly underneath each line.</p>
       <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-      <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
       <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
     </td>
   </tr>

@@ -4,8 +4,8 @@
 <img src="./gif.gif" width="100%" />
 
 <!-- Greeting -->
-<h2>Welcome to my profile 👋</h2>
-<h2>✦ ntw-cts ✦</h2>
+<p><strong style="font-size:1.5em;">Welcome to my profile <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"/></strong></p>
+<p><strong>✦ ntw-cts ✦</strong></p>
 
 <!-- Typing quote -->
 <img src="https://readme-typing-svg.demolab.com?font=Noto+Serif&size=13&pause=3000&color=B4BEFE&center=true&vCenter=true&width=600&height=30&lines=I+don't+watch+anime.+I+conduct+research+on+animated+storytelling.;My+code+works.+I+don't+know+why.+Please+don't+touch+it.;It's+not+procrastination+if+you're+watching+anime+with+subtitles.;404%3A+social+life+not+found.+Currently+watching+12+anime." alt="typing quote" />
@@ -27,7 +27,7 @@
 <table>
   <tr>
     <td width="60" align="center">
-      <img src="./IMG_4819.PNG" width="44" height="44" style="border-radius:10px"/>
+      <img src="./YUZU.PNG" width="44" height="44" style="border-radius:10px"/>
     </td>
     <td align="left">
       <a href="https://github.com/ntw-cts/yuzu"><strong>YUZU</strong></a>

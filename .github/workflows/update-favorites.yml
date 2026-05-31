@@ -1,0 +1,146 @@
+name: Update Favorite Anime Cards
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-cards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate favorite anime cards
+        run: |
+          python3 << 'PYEOF'
+          import urllib.request, json, textwrap, time
+
+          def fetch(title):
+              q = urllib.request.quote(title)
+              url = f"https://api.jikan.moe/v4/anime?q={q}&limit=1"
+              req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+              with urllib.request.urlopen(req) as r:
+                  return json.loads(r.read())["data"][0]
+
+          def wrap(text, width, lines):
+              words = text.split()
+              result, line = [], ""
+              for w in words:
+                  if len(line) + len(w) + 1 <= width:
+                      line = (line + " " + w).strip()
+                  else:
+                      result.append(line)
+                      line = w
+                      if len(result) >= lines:
+                          break
+              if line and len(result) < lines:
+                  result.append(line)
+              if len(result) == lines and len(result[-1]) > width - 1:
+                  result[-1] = result[-1][:width-1] + "…"
+              return result
+
+          favorites = [
+              ("Botan Kamiina Fully Blossoms When Drunk", "Spring 2026", "#ff6eb4"),
+              ("Shiboyugi: Playing Death Games to Put Food on the Table", "Winter 2026", "#58a6ff"),
+          ]
+
+          CARD_W, CARD_H = 860, 160
+          IMG_W = 100
+
+          cards_svg = ""
+          y_offset = 0
+
+          for title, season, accent in favorites:
+              try:
+                  d = fetch(title)
+                  time.sleep(1)  # jikan rate limit
+              except Exception as e:
+                  print(f"Failed to fetch {title}: {e}")
+                  continue
+
+              img_url = d["images"]["jpg"]["large_image_url"]
+              en_title = d.get("title_english") or d.get("title") or title
+              score = d.get("score") or "N/A"
+              episodes = d.get("episodes") or "?"
+              studios = ", ".join(s["name"] for s in d.get("studios", [])[:1]) or "—"
+              genres = [g["name"] for g in d.get("genres", [])[:3]]
+              synopsis = d.get("synopsis", "No synopsis available.")
+              synopsis_lines = wrap(synopsis, 90, 3)
+
+              # truncate title
+              if len(en_title) > 42:
+                  en_title = en_title[:42] + "…"
+
+              genre_pills = ""
+              gx = IMG_W + 16
+              for g in genres:
+                  pill_w = len(g) * 7 + 16
+                  genre_pills += f'''
+                  <rect x="{gx}" y="108" width="{pill_w}" height="18" rx="9"
+                    fill="none" stroke="{accent}" stroke-width="1" opacity="0.7"/>
+                  <text x="{gx + pill_w//2}" y="121" text-anchor="middle"
+                    font-family="monospace" font-size="10" fill="{accent}" opacity="0.9">{g}</text>
+                  '''
+                  gx += pill_w + 8
+
+              synopsis_text = ""
+              for si, sl in enumerate(synopsis_lines):
+                  synopsis_text += f'''<text x="{IMG_W + 16}" y="{72 + si*16}"
+                    font-family="monospace" font-size="11" fill="#8b949e">{sl}</text>'''
+
+              cards_svg += f'''
+              <g transform="translate(0, {y_offset})">
+                <rect width="{CARD_W}" height="{CARD_H}" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+                <rect width="3" height="{CARD_H}" rx="1" fill="{accent}"/>
+
+                <!-- poster placeholder (image via foreignObject won't work in SVG, use rect as bg) -->
+                <rect x="12" y="12" width="{IMG_W - 8}" height="{CARD_H - 24}" rx="8" fill="#0d1117" stroke="#30363d"/>
+                <image href="{img_url}" x="12" y="12" width="{IMG_W - 8}" height="{CARD_H - 24}"
+                  preserveAspectRatio="xMidYMid slice" clip-path="url(#clip{y_offset})"/>
+                <clipPath id="clip{y_offset}">
+                  <rect x="12" y="12" width="{IMG_W - 8}" height="{CARD_H - 24}" rx="8"/>
+                </clipPath>
+
+                <!-- season badge -->
+                <text x="{CARD_W - 16}" y="26" text-anchor="end"
+                  font-family="monospace" font-size="10" fill="{accent}" opacity="0.8">{season}</text>
+
+                <!-- title -->
+                <text x="{IMG_W + 16}" y="36"
+                  font-family="monospace" font-size="15" font-weight="bold" fill="#e6edf3">{en_title}</text>
+
+                <!-- score + studio -->
+                <text x="{IMG_W + 16}" y="54"
+                  font-family="monospace" font-size="11" fill="#ffd60a">⭐ {score}</text>
+                <text x="{IMG_W + 72}" y="54"
+                  font-family="monospace" font-size="11" fill="#8b949e">· {studios} · {episodes} eps</text>
+
+                <!-- synopsis -->
+                {synopsis_text}
+
+                <!-- genre pills -->
+                {genre_pills}
+              </g>
+              '''
+              y_offset += CARD_H + 12
+
+          total_h = y_offset - 12
+          svg = f'''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="{CARD_W}" height="{total_h}" viewBox="0 0 {CARD_W} {total_h}">
+            <rect width="{CARD_W}" height="{total_h}" fill="#0d1117"/>
+            {cards_svg}
+          </svg>'''
+
+          with open("favorites.svg", "w") as f:
+              f.write(svg)
+          print("Done")
+          PYEOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add favorites.svg
+          git diff --cached --quiet || git commit -m "chore: update favorite anime cards"
+          git push

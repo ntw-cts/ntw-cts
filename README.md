@@ -1,8 +1,8 @@
 <div align="center">
 
 <!-- Greeting -->
-<h2>Welcome to my profile <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"/></h2>
-<h1><img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=26&pause=9999999&color=CBA6F7&center=true&vCenter=true&width=400&height=55&lines=%E2%9C%A6+ntw-cts+%E2%9C%A6" alt="ntw-cts" /></h1>
+<h1>Welcome to my profile <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"/></h1>
+<h3><img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=26&pause=9999999&color=CBA6F7&center=true&vCenter=true&width=400&height=55&lines=%E2%9C%A6+ntw-cts+%E2%9C%A6" alt="ntw-cts" /></h3>
 
 <!-- Banner GIF -->
 <img src="./gif.gif" width="100%" />

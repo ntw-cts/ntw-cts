@@ -20,7 +20,7 @@
   <tr>
     <td width="50%" align="center" valign="top">
       <br/>
-      <img src="./YUZU.PNG" width="60" height="60" style="border-radius:10px"/>
+      <img src="./YUZU.png" width="60" height="60" style="border-radius:10px"/>
       <br/><br/>
       <a href="https://github.com/ntw-cts/yuzu"><strong>YUZU</strong></a>
       &nbsp;—&nbsp; Premium Anime Streaming Web App<br/><br/>

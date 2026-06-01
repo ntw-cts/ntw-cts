@@ -55,8 +55,6 @@
 <!-- Skill icons -->
 <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,express,py,ts&theme=dark" height="60" alt="My Skills" />
 
-<br/><br/>
-
 <!-- GitHub Streak -->
 <img src="https://streak-stats.demolab.com?user=ntw-cts&theme=catppuccin-mocha&hide_border=true" alt="GitHub Streak" />
 
